@@ -64,7 +64,7 @@ def run(args):
 	
 	handler = IdWorker(args.worker_id, args.data_center_id)
 	processor = Snowflake.Processor(handler)
-	transport = TSocket.TServerSocket(host=args.host, port=args.port)
+	transport = TSocket.TServerSocket(port=args.port)
 	tfactory = TTransport.TBufferedTransportFactory()
 	pfactory = TBinaryProtocol.TBinaryProtocolFactory()
 
