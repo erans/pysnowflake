@@ -75,7 +75,7 @@ class IdWorker(object, Iface):
      
 	def _till_next_millis(self, last_timestamp):
 		timestamp = self._time_gen()
-		while last_timestamp <= timestamp:
+		while timestamp <= last_timestamp:
 			timestamp = self._time_gen()
 
 		return timestamp
