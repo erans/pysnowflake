@@ -1,0 +1,3 @@
+#!/bin/sh
+rm *.deb
+fpm -s dir -t deb -n "megamcommon" -v 0.5 --after-install ./postinst --after-remove ./postrm --license "Apache" --vendor "Megam Systems" --maintainer "<rajthilak@megam.co.in>" --url "http://www.gomegam.com" --description "Python based unique id generator server based on Twitters snowflake. source : https://github.com/erans/pysnowflake.git" ./usr/share/megam

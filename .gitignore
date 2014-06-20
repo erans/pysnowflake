@@ -1,3 +1,4 @@
+*.deb
 *.pyc
 .DS_Store
 ._*

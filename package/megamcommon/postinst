@@ -1,0 +1,13 @@
+#!/bin/sh
+# Adding megam as system group
+if ! getent group megam > /dev/null 2>&1
+then
+    echo "Creating system group: megam"
+	addgroup --system megam
+fi
+
+# Adding megam
+if ! id -u megam > /dev/null 2>&1; then
+    echo "Creating user megam in group megam"
+    useradd --system --no-create-home --gid megam --shell /bin/false megam
+fi

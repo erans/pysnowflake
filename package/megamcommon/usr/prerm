@@ -1,0 +1,15 @@
+#!/bin/sh
+# Deleting user: megam and group: megam
+case "$1" in
+   remove|failed-upgrade|abort-upgrade|abort-install|disappear)
+   ;;
+   purge)
+        deluser --quiet --system megam > /dev/null || true
+        delgroup --quiet --system megam > /dev/null || true
+   ;;
+   upgrade)
+   ;;
+   *)
+      echo "postinst called with unknown argument \`\$1'" >&2
+   ;;
+esac
