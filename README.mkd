@@ -11,7 +11,7 @@ With Python its easier and quicker to setup.
 Due to various reasons this implementation does not reach the performance indicated in the original Snowflake implementation, however it is good enough
 in most cases and can be combined with the help of a software load balancer such as HAProxy to run multiple processes to get higher performance.
 
-You can checkout a Python client implemntation I did which I use with this server at: https://github.com/erans/pysnowflakeclient
+You can checkout a Python client implementation I did which I use with this server at: https://github.com/erans/pysnowflakeclient
 
 Installation
 ------------

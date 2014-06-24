@@ -1,0 +1,2 @@
+#!/bin/sh
+service gateway stop || echo "snowflake wasn't even running!"

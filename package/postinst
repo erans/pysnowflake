@@ -1,0 +1,8 @@
+#!/bin/sh
+
+chown megam:megam /var/run/megam/snowflake
+
+chown megam:megam /var/log/megam/snowflake
+
+initctl reload-configuration
+service snowflake start || echo "megamsnowflake could not be started. Try manually with service snowflake start"
